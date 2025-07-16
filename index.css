@@ -1,0 +1,251 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+    margin: 0;}
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#solarCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.title {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: white;
+  z-index: 2;
+}
+
+.title h1 {
+  font-size: 5em;
+  margin: 0;
+}
+h1.size{
+  margin-top: 0px;
+}
+
+.subtitle, .quote {
+  font-family: monospace;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+#solar-system {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#three-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+#solar-text {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  color: white;
+  z-index: 1;
+  font-family: 'Georgia', serif;
+}
+
+#details {
+  background: #111;
+  color: white;
+  padding: 10px 60px;
+  font-family: sans-serif;
+  min-height: max-content;
+}
+#ex{
+   background: #111;
+  color: white;
+  padding: 100px 60px;
+  font-family: sans-serif;
+  min-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+.welcome{
+  border-style:ridge;
+  border-radius: 20%;
+  border-color: white;
+  width: 1140px;
+  height: max-content;
+  padding: 80px;
+}
+.para{
+    font-size: 18px;
+    font-family: monospace;
+}
+
+.size{
+    font-size: 50px;
+    margin-left: 60px;
+   font-family: "Lucida Calligraphy", cursive;
+
+}
+.containerer {
+ display: flex;
+ justify-content: space-evenly;
+}
+.planet-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #888;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  color: #fff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 400px;
+  margin-left: 60px;
+}
+
+.planet-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.more-info {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+.planet-card:hover .more-info {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+.planet{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+
+#facts {
+  padding: 70px 40px;
+  background:#111; /* slightly transparent over 3D scene */
+  color: white;
+  text-align: center;
+  
+}
+
+.facts-heading {
+  font-size: 48px;
+  margin-bottom: 60px;
+  animation: slideInLeft 1s ease forwards;
+  opacity: 0;
+}
+
+.facts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.fact-card h3{
+  font-size: 30px;
+}
+.fact-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  backdrop-filter: blur(3px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+  font-family: monospace;
+}
+.one{
+  font-size: 17px;
+}
+
+.fact-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+
+/* Animations */
+@keyframes slideInLeft {
+  0% { transform: translateX(-50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+
+
+#footer {
+  background-color: #0b0c10; /* Very dark background */
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#footer h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#footer p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00bfff; /* light blue on hover */
+}
+
+.footer-copy {
+  font-size: 14px;
+  opacity: 0.6;
+}

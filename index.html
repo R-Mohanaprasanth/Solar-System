@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Started with Three.js</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <script type="module" src="main.js"></script>
+
+    <section id="hero">
+      <canvas id="solarCanvas"></canvas>
+      <div class="title">
+        <h1>The <strong> SYN </strong><br />Solar System</h1>
+        <p class="subtitle">A Model of Our Planetary System</p>
+        <p class="quote">
+          "From Mercury to Neptune – a journey through space."
+        </p>
+      </div>
+    </section>
+
+    <section id="ex">
+      <div class="welcome">
+        <div>
+          <div
+            style="
+              font-size: 60px;
+              font-family: Lucida Calligraphy, cursive;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            Welcome space Traveler!
+          </div>
+          <div
+            style="font-family: monospace; font-size: 22px; margin-top: 60px"
+          >
+            "Syn is an interactive 3D model of our Solar System, designed to
+            visually explore the planets, their motions, and the beauty of
+            celestial mechanics in real time."
+          </div>
+          <p style="font-family: monospace; font-size: 22px; margin-top: 60px">
+            We hope you will have as much fun exploring the universe with our
+            app as do we while making it.
+          </p>
+        </div>
+
+        <div class="weelcome">
+          <img
+            style="width: 1000px; border-radius: 20%; margin-left: 70px"
+            src="./textures/wp13309745.webp"
+            alt="Welcome Image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="details">
+      <div class="container">
+        <h1 class="size">Planetary Details</h1>
+        <p
+          style="
+            margin-left: 60px;
+            font-size: 22px;
+            font-family: monospace;
+            margin-bottom: 50px;
+          "
+        >
+          Learn more about each planet in our Solar System, including their
+          mass, size, distance from the sun, moons, and more.
+        </p>
+
+        <div class="containerer">
+          <div class="planet-card">
+            <img class="planet" src="./textures/2k_mercury.jpg" alt="Mercury" />
+            <h3>Mercury</h3>
+            <p class="para">
+              The smallest planet, closest to the Sun. No moons.
+            </p>
+            <div class="more-info">
+              <p class="para"><strong>Orbit:</strong> 88 Earth days</p>
+              <p class="para"><strong>Moons:</strong> 0</p>
+              <p class="para"><strong>Temperature:</strong> -173°C to 427°C</p>
+            </div>
+          </div>
+
+          <div class="planet-card">
+            <img
+              class="planet"
+              src="./textures/8k_venus_surface.jpg"
+              alt="Venus"
+            />
+            <h3>Venus</h3>
+            <p class="para">
+              Earth's twin in size but with a scorching atmosphere.
+            </p>
+            <div class="more-info">
+              <p class="para"><strong>Orbit:</strong> 225 Earth days</p>
+              <p class="para"><strong>Moons:</strong> 0</p>
+              <p class="para"><strong>Temperature:</strong> 462°C (average)</p>
+            </div>
+          </div>
+
+          <div class="planet-card">
+            <img
+              class="planet"
+              src="./textures/8k_earth_daymap.jpg"
+              alt="Earth"
+            />
+            <h3>Earth</h3>
+            <p class="para">
+              The only known planet to harbor life, with vast oceans and diverse
+              ecosystems.
+            </p>
+            <div class="more-info">
+              <p class="para"><strong>Orbit:</strong> 365.25 Earth days</p>
+              <p class="para"><strong>Moons:</strong> 1</p>
+              <p class="para"><strong>Temperature:</strong> -88°C to 58°C</p>
+            </div>
+          </div>
+
+          <div class="planet-card">
+            <img class="planet" src="./textures/8k_mars.jpg" alt="Mars" />
+            <h3>Mars</h3>
+            <p class="para">
+              The red planet with dusty landscapes and the tallest volcano in
+              the solar system.
+            </p>
+            <div class="more-info">
+              <p class="para"><strong>Orbit:</strong> 687 Earth days</p>
+              <p class="para"><strong>Moons:</strong> 2</p>
+              <p class="para"><strong>Temperature:</strong> -125°C to 20°C</p>
+            </div>
+          </div>
+        </div>
+        <div class="containerer">
+          <div class="planet-card">
+            <img class="planet" src="./textures/8k_jupiter.jpg" alt="Jupiter" />
+            <h3>Jupiter</h3>
+            <p class="para">
+              The largest planet, a gas giant known for its Great Red Spot
+              storm.
+            </p>
+            <div class="more-info">
+              <p class="para"><strong>Orbit:</strong> 11.9 Earth years</p>
+              <p class="para"><strong>Moons:</strong> 95</p>
+              <p class="para"><strong>Temperature:</strong> -108°C (average)</p>
+            </div>
+          </div>
+
+          <div class="planet-card">
+            <img class="planet" src="./textures/8k_saturn.jpg" alt="Saturn" />
+            <h3>Saturn</h3>
+            <p class="para">
+              Famous for its stunning ring system made of ice and rock
+              particles.
+            </p>
+            <div class="more-info">
+              <p class="para"><strong>Orbit:</strong> 29.5 Earth years</p>
+              <p class="para"><strong>Moons:</strong> 146</p>
+              <p class="para"><strong>Temperature:</strong> -139°C (average)</p>
+            </div>
+          </div>
+
+          <div class="planet-card">
+            <img class="planet" src="./textures/2k_uranus.jpg" alt="Uranus" />
+            <h3>Uranus</h3>
+            <p class="para">
+              An icy blue planet that spins on its side with a faint ring
+              system.
+            </p>
+            <div class="more-info">
+              <p class="para"><strong>Orbit:</strong> 84 Earth years</p>
+              <p class="para"><strong>Moons:</strong> 27</p>
+              <p class="para"><strong>Temperature:</strong> -224°C (average)</p>
+            </div>
+          </div>
+
+          <div class="planet-card">
+            <img class="planet" src="./textures/2k_neptune.jpg" alt="Neptune" />
+            <h3>Neptune</h3>
+            <p class="para">
+              The farthest known planet, with supersonic winds and a deep blue
+              hue.
+            </p>
+            <div class="more-info">
+              <p class="para"><strong>Orbit:</strong> 165 Earth years</p>
+              <p class="para"><strong>Moons:</strong> 14</p>
+              <p class="para"><strong>Temperature:</strong> -218°C (average)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="facts">
+      <h2 class="facts-heading">Interesting Facts</h2>
+      <div class="facts-container">
+        <div class="fact-card">
+          <h3>Mercury</h3>
+          <p class="one">
+            Extreme temperatures swing from -173°C to 427°C due to its lack of
+            atmosphere.
+          </p>
+        </div>
+        <div class="fact-card">
+          <h3>Venus</h3>
+          <p class="one">
+            It spins in the opposite direction — the Sun rises in the west here!
+          </p>
+        </div>
+        <div class="fact-card">
+          <h3>Earth</h3>
+          <p class="one">
+            It’s the only planet known to support life and has liquid water.
+          </p>
+        </div>
+        <div class="fact-card">
+          <h3>Mars</h3>
+          <p class="one">
+            Home to Olympus Mons, the tallest volcano in the Solar System.
+          </p>
+        </div>
+        <div class="fact-card">
+          <h3>Jupiter</h3>
+          <p class="one">It could fit all the other planets inside it!</p>
+        </div>
+        <div class="fact-card">
+          <h3>Saturn</h3>
+          <p class="one">
+            Its rings are made of ice chunks and rock — some as big as houses!
+          </p>
+        </div>
+        <div class="fact-card">
+          <h3>Uranus</h3>
+          <p class="one">
+            It rolls around the Sun on its side due to a massive past collision.
+          </p>
+        </div>
+        <div class="fact-card">
+          <h3>Neptune</h3>
+          <p class="one">
+            Its winds reach up to 2,100 km/h — faster than the speed of sound!
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="footer-content">
+        <h3>Syn – Our Solar System Model</h3>
+        <p>Exploring the cosmos, one planet at a time.</p>
+
+        <div class="footer-links">
+          <a href="#">Home</a>
+          <a href="#ex">About</a>
+          <a href="#details">Planet Info</a>
+          <a href="#facts">Interesting Facts</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <p class="footer-copy">&copy; 2025 Syn | All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
